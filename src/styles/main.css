@@ -87,21 +87,7 @@ label {
 
 /*******************************************/
 
-.app-header {
-  display: flex;
-}
 
-.app-header__logo {
-  margin-right: auto;
-}
-
-.app-header__logo img {
-  max-width: 120px;
-}
-
-.app-header__menu {
-  font-size: 3em;
-}
 
 .app-footer {
   margin-top: auto;
@@ -112,19 +98,7 @@ label {
 
 /*******************************************/
 
-.home > * {
-  margin-bottom: 20px;
-}
 
-.home__logo,
-.home__select-users {
-  max-width: 250px;
-}
-
-.home__select-users {
-  width: 100%;
-  padding: 10px;
-}
 
 /*******************************************/
 

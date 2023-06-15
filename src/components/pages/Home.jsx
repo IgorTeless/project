@@ -5,6 +5,8 @@ import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import logo from "../../images/logo.svg";
 import Loading from "../atoms/Loading";
 
+import styles from "./Home.module.css";
+
 export default function Home() {
   const navigate = useNavigate();
 
@@ -26,13 +28,13 @@ export default function Home() {
   return isLoading ? (
     <Loading />
   ) : (
-    <div className="home center">
-      <div class="home__logo">
+    <div className={`${styles.home} center`}>
+      <div class={styles.logo}>
         <img src={logo} className="responsive" alt="" />
       </div>
       <select
         onChange={(event) => setCurrentUser(event.target.value)}
-        className="home__select-users"
+        className={styles.selecUsers}
       >
         <option value="">Selecione um usuário</option>
         {users
