@@ -1,13 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import logo from "../../images/logo.svg";
 import Loading from "../atoms/Loading";
 
 export default function Home() {
   const navigate = useNavigate();
 
+  const { currentUser, setCurrentUser } = useContext(CurrentUserContext);
+
   const [users, setUsers] = useState([]);
-  const [currentUser, setCurrentUser] = useState("");
+
   const [isLoading, setisLoading] = useState(true);
 
   useEffect(() => {
